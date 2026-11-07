@@ -1,0 +1,23 @@
+services:
+  pgadmin:
+    image: elestio/pgadmin:latest
+    depends_on:
+      - postgres
+    environment:
+        PGADMIN_DEFAULT_EMAIL: admin@livraria.com
+        PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+        - "8080:80"
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: rede_livrarias
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql
+
+volumes:
+  postgres:
