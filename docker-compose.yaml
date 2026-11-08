@@ -4,7 +4,7 @@ services:
     depends_on:
       - postgres
     environment:
-        PGADMIN_DEFAULT_EMAIL: admin@livraria.com
+        PGADMIN_DEFAULT_EMAIL: admin@rede_literaria.com
         PGADMIN_DEFAULT_PASSWORD: admin
     ports:
         - "8080:80"
