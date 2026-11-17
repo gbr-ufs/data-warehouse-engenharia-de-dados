@@ -1,6 +1,6 @@
 services:
   pgadmin:
-    image: elestio/pgadmin:latest
+    image: docker.io/elestio/pgadmin:latest
     depends_on:
       - postgres
     environment:
