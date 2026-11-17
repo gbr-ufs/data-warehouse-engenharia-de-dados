@@ -21,6 +21,7 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
       - ./populate.sql:/docker-entrypoint-initdb.d/populate.sql:ro
       - ./dw_schema.sql:/docker-entrypoint-initdb.d/dw_schema.sql:ro
+      - ./carga_de_dados.sql:/docker-entrypoint-initdb.d/carga_de_dados.sql:ro
 
 volumes:
   postgres:
